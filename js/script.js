@@ -4,14 +4,21 @@ const shoppingItem = ["pane", "salame", "prosciutto", "campari", "mortadella", "
 
 let shoppingList = document.querySelector(".shopping-list");
 
+let shoppingItemHtml = "";
 
 let i = 0
 while(i < shoppingItem.length){
     const thisShoppingItem = shoppingItem[i];
     
-    let shoppingItemHtml = `<li>${thisShoppingItem}</li>`
-    console.log(shoppingItemHtml);
-    shoppingList.innerHTML += shoppingItemHtml; 
+    shoppingItemHtml = `<li class="items">${thisShoppingItem}</li>`;
     i++;
+    
+    console.log(shoppingItemHtml);
+    shoppingList.innerHTML += shoppingItemHtml;
+    
 }
+console.log(shoppingList);
 
+
+
+// shoppingList.innerHTML += document.getElementsByClassName("item")[i];
